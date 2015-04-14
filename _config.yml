@@ -9,4 +9,4 @@ url: "usdepartmentoflabor.github.io/DotNet_DOLDataSDK" # the base hostname & pro
 
 # Build settings
 markdown: kramdown
-ß
+highlighter: pygments
