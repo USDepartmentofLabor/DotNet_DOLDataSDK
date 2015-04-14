@@ -35,7 +35,7 @@ producer, but requires an authorization header to be added to every request. The
 <ol>
 	<li>Define you API Key and Shared Secret in DOLDataUtil.cs</li>
 
-{% highlight aspx-cs %}
+{% highlight csharp %}
 //Define API Key and Shared Secret in DOLDataUtil.cs 
 private const string ApiKey =  "YOUR API KEY";
 {% endhighlight %}
@@ -49,14 +49,14 @@ new  FormsServiceReference.FormsEntities (new Uri("http://api.dol.gov/V1/FORMS")
 {% endhighlight %}
 	</li>
 	<li>Add an event handler to SendingRequest pointing to DOLDataUtil.service_SendingRequest
-{% highlight aspx-cs %}
+{% highlight csharp %}
 //Attach event handler to the SendingRequest event
 //This will take care of adding the authorization header
 fe.SendingRequest  += new EventHandler<SendingRequestEventArgs>(DOLDataUtil.service_SendingRequest);
 {% endhighlight %}
 	</li>
 	<li>Use Linq to query the data.
-{% highlight aspx-cs %}
+{% highlight csharp %}
 //Use Linq to query the data
 //Example: Get top 10 agencies and output to console
 foreach (var form in  fe.Agency.Take(10))	
@@ -68,7 +68,7 @@ foreach (var form in  fe.Agency.Take(10))
 	<li>For service calls like SummerJobs, use proxy to execute call.
 	<p>Pass the Service Operation name and paramters to the execute method.</p>
 
-{% highlight aspx-cs %}
+{% highlight csharp %}
 string jsonData = fe.Execute<string>(new Uri(
   "getJobsListing?format=json&region=&locality=&zip=&employmentType='Any'&skipCount=1&query='Nurse'",
   UriKind.Relative)).FirstOrDefault().Replace("\\n", "").Replace("\\\"", "\"").Trim('\"');

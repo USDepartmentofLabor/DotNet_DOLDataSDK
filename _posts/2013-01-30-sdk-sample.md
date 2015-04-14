@@ -123,7 +123,7 @@ Secure logins are provided by the SDK, which can be downloaded <a href="http://d
 <p>This call return Json data which can be added directly to the view. Add this javascript to the application to inject this JSON directly to the script.<br />
 &nbsp;</p>
 
-{% highlight aspx-cs %}
+{% highlight js %}
 <script type="text/javascript">
 var jsonData = @Html.Raw(ViewBag.JsonData);
 
@@ -150,7 +150,7 @@ $(document).ready(function () {
 <p>Include Using statements to reference the appropriate classes.<br />
 </p>
 
-{% highlight aspx-cs %}
+{% highlight csharp %}
 using System.Data.Services.Client;
 using gov.dol.doldata.util;
 using ServiceReference1;
@@ -166,7 +166,7 @@ using ServiceReference1;
 Wire the <strong>DOLDataUtil.service_SendingRequest</strong> static method to the <strong>entity.SendingRequest</strong> event handler.<br />
 &nbsp;</p>
 
-{% highlight aspx-cs %}
+{% highlight csharp %}
 protected void Page_Load(object sender, EventArgs e)
 {
 	AgencyEntities entity = new AgencyEntities(new Uri(“<a>http://api.dol.gov/V1/DOLAgency</a>”));
@@ -186,7 +186,7 @@ protected void Page_Load(object sender, EventArgs e)
 
 
 
-{% highlight aspx-cs %}
+{% highlight csharp %}
 public ActionResult Index()
 {
 	ViewBag.Message = "Welcome to ASP.NET MVC!";
@@ -215,7 +215,7 @@ Edit the <strong>DOLDataUtil class</strong> within the <strong>DOLDataUtil.cs</s
 
 
 
-{% highlight aspx-cs %}
+{% highlight csharp %}
 using System;
 using System.Collections.Generic;
 using System.Linq;
