@@ -1,27 +1,57 @@
 <header class="site-header">
+    <div class="wrapper">
+        <div class="hide"><a href="#maincontent">Skip to Main Content</a></div>
+        <!--Start Banner -->
+        <a id="top"></a>
 
-  <div class="wrapper">
+        <div class="row top-header" role="banner">
+            <div class="large-6 columns"><a href="http://developer.dol.gov/"> <span class="brand"></span>
 
-    <a class="site-title" href="{{ site.baseurl }}/">{{ site.title }}</a>
+                <h1 class="header-logo-type">DEVELOPER PORTAL<br/>
+                    UNITED STATES DEPARTMENT OF LABOR</h1>
+            </a></div>
+            <div class="large-2 columns">
+                <div class="social-block right hide-for-small"><a href="http://www.facebook.com/departmentoflabor"
+                                                                  class="sm-facebook">Facebook</a>
+                    <a href="http://twitter.com/usdol" class="sm-twitter">Twitter</a>
+                    <a href="http://www.instagram.com/USDOL" class="sm-instagram">DOL Instagram</a>
+                    <a href="http://www.dol.gov/rss/" class="sm-rss">RSS</a>
+                    <a href="javascript:window.open('https://public.govdelivery.com/accounts/USDOL/subscriber/new','Popup','width=800,height=500,toolbar=no,scrollbars=yes,resizable=yes'); void('');"
+                       ONCLICK="window.status='Subscribe'; return true"
+                       ONMOUSEOVER="window.status='Subscribe'; return true"
+                       ONMOUSEOUT="window.status=''; return true" class="sm-email">Email</a></div>
+            </div>
+            <div class="large-4 columns">
+                <div id="searchbox">
+                    <!--<form accept-charset="UTF-8" action="http://search.usa.gov/search" id="search_form" method="get">
+                        <div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;"/></div>
+                        <div class="small-10 columns">
+                            <input id="affiliate" name="affiliate" type="hidden" value="developer.dol.gov"/>
+                            <label for="query">Enter Search Term(s):</label>
+                            <input autocomplete="off" class="usagov-search-autocomplete" id="query" name="query" type="text"/>
+                        </div>
+                        <div class="small-2 columns"><input name="commit" type="submit" value="Search"/>
+                        </div>
+                    </form></-->
+                    <form action="//search.usa.gov/search" method="get" class="usagov" role="search">
+                        <div class="small-10 columns">
+                            <label for="query"><span class="hide">Search</span></label>
+                            <input autocomplete="off" type="text" id="query" name="query"
+                                   placeholder="Enter Search Terms" class="usagov-search-autocomplete"
+                                   required="required">
+                        </div>
+                        <div class="small-2 columns">
+                            <input id="affiliate" name="affiliate" type="hidden" value="developer.dol.gov"/>
 
-    <nav class="site-nav">
-      <a href="#" class="menu-icon">
-        <svg viewBox="0 0 18 15">
-          <path fill="#424242" d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.031C17.335,0,18,0.665,18,1.484L18,1.484z"/>
-          <path fill="#424242" d="M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0c0-0.82,0.665-1.484,1.484-1.484 h15.031C17.335,6.031,18,6.696,18,7.516L18,7.516z"/>
-          <path fill="#424242" d="M18,13.516C18,14.335,17.335,15,16.516,15H1.484C0.665,15,0,14.335,0,13.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.031C17.335,12.031,18,12.696,18,13.516L18,13.516z"/>
-        </svg>
-      </a>
-
-      <div class="trigger">
-        {% for page in site.pages %}
-          {% if page.title %}
-          <a class="page-link" href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a>
-          {% endif %}
-        {% endfor %}
-      </div>
-    </nav>
-
-  </div>
-
+                            <input type="image" src="{{ site.baseurl }}/img/icon-search.png" alt="Search"
+                                   class="usagov-submit">
+                            <!--
+                            <input type="image"  src="{{ site.baseurl }}/img/beta_ribbon.png"  vspace="4"  alt="Search DOL" class="usagov-submit">
+                            -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 </header>
