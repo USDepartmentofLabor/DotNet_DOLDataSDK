@@ -9,4 +9,5 @@ url: "http://usdepartmentoflabor.github.io" # the base hostname & protocol for y
 
 # Build settings
 markdown: kramdown
-highlighter: pygments
+pygments: true
+permalink: /:categories/:title
