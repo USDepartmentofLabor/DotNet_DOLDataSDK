@@ -169,7 +169,7 @@ Wire the <strong>DOLDataUtil.service_SendingRequest</strong> static method to th
 {% highlight csharp %}
 protected void Page_Load(object sender, EventArgs e)
 {
-	AgencyEntities entity = new AgencyEntities(new Uri(“<a>http://api.dol.gov/V1/DOLAgency</a>”));
+	AgencyEntities entity = new AgencyEntities(new Uri("<a>http://api.dol.gov/V1/DOLAgency</a>"));
 	entity.SendingRequest += new EventHandler<SendingRequestEventArgs>(DOLDataUtil.service_SendingRequest);
 	AgenciesView.DataSource = entity.Agencies;
 	AgenciesView.DataBind();
