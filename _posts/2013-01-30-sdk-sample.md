@@ -108,10 +108,10 @@ Secure logins are provided by the SDK, which can be downloaded <a href="http://d
 &nbsp;</p>
 
 {% highlight aspx-cs %}
-<asp:GridView ID=”AgenciesView” runat=”Server” AutoGenerateColumns=”False”>
+<asp:GridView ID="AgenciesView" runat="Server" AutoGenerateColumns="False">
 	<Columns>
-		<asp:BoundField DataField=”Agency” HeaderText=”Agency” />
-		<asp:BoundField DataField=”AgencyFullName” HeaderText=”Agency Full Name” />
+		<asp:BoundField DataField="Agency" HeaderText="Agency" />
+		<asp:BoundField DataField="AgencyFullName" HeaderText="Agency Full Name" />
 	</Columns>
 </asp:GridView>
 {% endhighlight %}
